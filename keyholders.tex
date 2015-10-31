@@ -1,0 +1,47 @@
+\documentclass[a4paper,10pt]{scrreprt}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{multicol}
+\usepackage[]{scrpage2}
+\usepackage{graphicx}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=2.65cm]{geometry}
+
+\newcommand{\shiftleft}[2]{\makebox[0pt][r]{\makebox[#1][l]{#2}}}
+\renewcommand*{\familydefault}{\sfdefault}
+
+\rofoot {
+	\raisebox{-2.7cm}{
+		\shiftleft{0.88\paperwidth}{
+			\includegraphics[width=\paperwidth]{img/footer-line.pdf}
+		}
+	}
+}
+
+\thispagestyle{scrheadings}
+\pagestyle{scrheadings}
+
+\sloppy
+
+\useshorthands{'}
+\defineshorthand{'S}{\Sentence\ignorespaces}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+
+\usepackage{hyperref}
+\hypersetup{
+	pdfauthor={Kreativität trifft Technik e.V.},
+	pdftitle={Beitragsordnung des Vereins Kreativität trifft Technik}
+}
+
+\begin{document}
+
+\hfill
+\includegraphics[scale=1.50]{img/logo.pdf}
+
+\input{content}
+
+\input{smallprint}
+
+\end{document}
